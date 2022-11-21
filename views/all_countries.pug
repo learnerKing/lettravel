@@ -1,0 +1,12 @@
+//-allCountries is data we get in listAllCountries func in hotelcontrollers
+//-each country is individual data of allCountries we loop through
+extends layout 
+include mixins/_country_list.pug
+block content 
+    h2=title
+    .country_wrapper
+        ul 
+            each country in allCountries
+               +countryList(country)
+            else 
+                li There are no countries

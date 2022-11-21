@@ -1,0 +1,10 @@
+//-this allhotels are json data or you can say form data we get with .find() method in listallhotel function in hotelcontroller.js //hotel variable below holds individual hotel information from allhotels json array of object data
+extends layout 
+
+include mixins/_hotel
+
+block content
+  h2=title 
+  each hotel in allHotels 
+    .hotel_wrapper 
+      +hotel(hotel) 
